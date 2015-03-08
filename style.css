@@ -357,6 +357,9 @@ html {
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
+#custom-background-css {
+	width: 100%;
+}
 
 blockquote:before,
 blockquote:after,
@@ -520,62 +523,51 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
+	display: inline-block;
+	position: absolute;
+	top: 81px;
+	height: 90px;
 	width: 100%;
+	background: rgba(32, 32, 24, 0.64);
+	z-index: 1;
+	font-family: 'Arvo';
+	padding-left: 600px;
 }
 
 .main-navigation ul {
 	list-style: none;
-	margin: 0;
-	padding-left: 0;
+	padding-top: 2.5rem;
+	margin: auto;
+	width: 600px;
+	height: 90px;
 }
 
 .main-navigation li {
 	float: left;
-	position: relative;
+	margin-right: 1rem;
+	font-size: 0.9em;
+	text-transform: uppercase;
 }
 
 .main-navigation a {
-	display: block;
 	text-decoration: none;
+	color: white;
 }
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
 
 .main-navigation li:hover > a {
 }
 
 .main-navigation ul ul :hover > a {
+
 }
 
 .main-navigation ul ul a:hover {
+	background: #898989;
 }
 
-.main-navigation ul li:hover > ul {
-	left: auto;
-}
+
 
 .main-navigation ul ul li:hover > ul {
 	left: 100%;
@@ -728,6 +720,42 @@ a:active {
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.5 Header
+--------------------------------------------------------------*/
+.site-header {
+}
+
+.site-branding {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	z-index: 2;
+}
+
+.site-title {
+	font-family: 'Arvo';
+	font-size: 6.5rem;
+	margin-top: 0;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.site-description {
+	font-family: Helvetica, sans-serif;
+	margin-top: 0;
+	color: #FFF;
+	margin-top: -6.9rem;
+	font-size: 1.45rem;
+}
+
+/*--------------------------------------------------------------
+10.5 Header
+--------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
