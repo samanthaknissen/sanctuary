@@ -10,12 +10,20 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sanctuary' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'sanctuary' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'sanctuary' ), 'sanctuary', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="footer" role="contentinfo">
+
+		<nav class="social">
+	<ul>
+		<li><a>Tumblr</a></li>
+		<li><a>Twitter</a></li>
+		<li><a>Pinterest</a></li>
+		<li><a>Facebook</a></li>
+	</ul>
+</nav>
+<div class="site-info">
+			<p>© copyright Sactuary Eco-Retreat 2014</p>
+		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

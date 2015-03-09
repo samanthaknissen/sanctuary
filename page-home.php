@@ -11,5 +11,8 @@
  the_field('col-1');
 ?>
 <?php
+the_field('col-2');
+?>
+<?php
  get_footer();
  ?>

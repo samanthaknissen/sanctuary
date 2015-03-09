@@ -751,10 +751,66 @@ a:active {
 	margin-top: -6.9rem;
 	font-size: 1.45rem;
 }
+.footer {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	height: 90px;
+	width: 100%;
+	background: rgba(32, 32, 24, 0.64);
+	z-index: 1;
+	font-family: 'Arvo';
+}
+.footer ul {
+	list-style: none;
+	padding-top: 2.5rem;
+	height: 90px;
+}
 
+.footer li {
+	float: left;
+	margin-right: 1rem;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
+.footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.social ul {
+	margin: 0;
+}
+
+.site-info {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	color: white;
+}
 /*--------------------------------------------------------------
-10.5 Header
+10.5 Homepae columns
 --------------------------------------------------------------*/
+
+.col-1 {
+	font-size: 3em;
+	font-family: 'Arvo';
+	color: white;
+	position: absolute;
+	right: 2.2em;
+	top: 11em;
+}
+
+.col-2 {
+	font-size: 3em;
+	font-family: helvetica; sans-serif;
+	color: white;
+	position: absolute;
+	right: 0.2em;
+	top: 12em;
+}
 
 /*--------------------------------------------------------------
 10.1 Posts and pages
