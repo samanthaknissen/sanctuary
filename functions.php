@@ -138,3 +138,48 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_action( 'init', 'create_my_post_types' );
+
+function create_my_post_types() {
+ register_post_type( 'team_member',
+ array(
+      'labels' => array(
+      	'name' => __( 'Team Members' ),
+      	'singular_name' => __( 'Team Member' ),
+      	'add_new' => __( 'Add New' ),
+      	'add_new_item' => __( 'Add New Team Member' ),
+      	'edit' => __( 'Edit' ),
+      	'edit_item' => __( 'Edit Team Member' ),
+      	'new_item' => __( 'New Team Member' ),
+      	'view' => __( 'View Team Member' ),
+      	'view_item' => __( 'View Team Member' ),
+      	'search_items' => __( 'Search Team Members' ),
+      	'not_found' => __( 'No Team Members found' ),
+      	'not_found_in_trash' => __( 'No Team Members found in Trash' ),
+      	'parent' => __( 'Parent Team Member' ),
+      ),
+ 'public' => true,
+      'menu_position' => 4,
+      'rewrite' => array('slug' => 'team_members'),
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+      'taxonomies' => array('category', 'post_tag'),
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'query_var' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+     )
+  );
+}
+
+function html5_insert_image($html, $id, $caption, $title, $align, $url) {
+  $html5 = "<figure id='post-$id media-$id' class='align-$align'>";
+  $html5 .= "<img src='$url' alt='$title' />";
+  if ($caption) {
+    $html5 .= "<figcaption>$caption</figcaption>";
+  }
+  $html5 .= "</figure>";
+  return $html5;
+}
+add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );

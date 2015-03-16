@@ -37,6 +37,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	10.1 Posts and pages
 	10.2 Asides
 	10.3 Comments
+	10.4 Style for Cabin Pages
 11.0 Infinite scroll
 12.0 Media
 	12.1 Captions
@@ -532,19 +533,25 @@ a:active {
 	z-index: 1;
 	font-family: 'Arvo';
 	padding-left: 600px;
+	padding-top: 20px;
 }
 
 .main-navigation ul {
 	list-style: none;
-	padding-top: 2.5rem;
-	margin: auto;
+	display: inline;
+	text-align: left;
+	padding: 15px 4px 17px 0;
+	margin: 0;
 	width: 600px;
 	height: 90px;
 }
 
-.main-navigation li {
+.main-navigation ul li {
 	float: left;
-	margin-right: 1rem;
+	display: inline-block;
+	position: relative;
+	padding: 15px 20px;
+	margin-right: -4px;
 	font-size: 0.9em;
 	text-transform: uppercase;
 }
@@ -553,29 +560,47 @@ a:active {
 	text-decoration: none;
 	color: white;
 }
-
-
-
-.main-navigation li:hover > a {
+.main-navigation ul li ul {
+	padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+	width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
 }
-
-.main-navigation ul ul :hover > a {
-
+.main-navigation ul li ul li {
+  background: #D3D3D3;
+  display: block;
+  text-shadow: 0 -1px 0 #000;
 }
-
-.main-navigation ul ul a:hover {
-	background: #898989;
+.main-navigation ul li ul li a {
+	color: black;
+	font-family: helvetica, sans-serif;
 }
-
-
-
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
+.main-navigation ul ul li:hover {
+	background: #A9A9A9;
 }
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
+.main-navigation ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+	color: #A9A9A9;
+}
+.main-navigation ul ul li:hover {
+	color: #A9A9A9;
+}
+.main-navigation li ul li {
+	width: 100%;
 }
 
 /* Small menu. */
@@ -615,6 +640,14 @@ a:active {
 	text-align: right;
 	width: 50%;
 }
+
+.social {
+	font-size: 4em;
+	position: absolute;
+	bottom: 0;
+}
+
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -753,7 +786,7 @@ a:active {
 }
 .footer {
 	display: inline-block;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	height: 90px;
 	width: 100%;
@@ -776,7 +809,7 @@ a:active {
 
 .footer a {
 	text-decoration: none;
-	color: white;
+	color: #A5A99E;
 }
 
 .social ul {
@@ -788,7 +821,7 @@ a:active {
 	bottom: 0;
 	right: 0;
 	z-index: 100;
-	color: white;
+	color: #A5A99E;
 }
 /*--------------------------------------------------------------
 10.5 Homepae columns
@@ -844,6 +877,15 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.background {
+	width: 100%;
+	z-index: -100;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
@@ -861,6 +903,68 @@ a:active {
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+10.4 Style for Cabin Pages
+--------------------------------------------------------------*/
+.content-area {
+	width: 100%;
+	background-color: #fff;
+	margin: 8.75em auto;
+	padding: 2em;
+	height: 48em;
+}
+
+.gallery {
+	width: 45%;
+	float: left;
+	margin-left: 2em;
+}
+.sidebar {
+	width: 35%;
+	float: left;
+	margin-left: 2.5em;
+}
+
+.sidebar h2 {
+	font-family: 'Arvo';
+	text-transform: uppercase;
+	font-size: 1.1rem;
+}
+
+.sidebar h3 {
+	font-family: 'Helvitca', sans-serif;
+	font-weight: bold;
+	font-size: 1.1rem;
+	margin-bottom: 0;
+}
+
+.sidebar li {
+	font-family: 'Helvitca', sans-serif;
+	line-height: 1.1rem;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar p {
+	line-height: 1.1rem;
+}
+
+.sidebar a {
+	color: green;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.pure-button {
+	background: #006400;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	margin-top: 0.75em;
 }
 
 /*--------------------------------------------------------------

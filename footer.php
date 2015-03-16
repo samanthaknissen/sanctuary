@@ -14,10 +14,10 @@
 
 		<nav class="social">
 	<ul>
-		<li><a>Tumblr</a></li>
-		<li><a>Twitter</a></li>
-		<li><a>Pinterest</a></li>
-		<li><a>Facebook</a></li>
+		<li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 	</ul>
 </nav>
 <div class="site-info">
